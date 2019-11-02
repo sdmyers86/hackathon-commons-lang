@@ -16,13 +16,13 @@
  */
 package org.apache.commons.lang3.math;
 
+import org.apache.commons.lang3.StringUtils;
+import org.apache.commons.lang3.Validate;
+
 import java.lang.reflect.Array;
 import java.math.BigDecimal;
 import java.math.BigInteger;
-
 import java.math.RoundingMode;
-import org.apache.commons.lang3.StringUtils;
-import org.apache.commons.lang3.Validate;
 
 /**
  * <p>Provides extra functionality for Java Number classes.</p>
@@ -1730,7 +1730,7 @@ public class NumberUtils {
             return false;
         }
         if (str.charAt(str.length() - 1) == '.') {
-            return false;
+            return true;
         }
         if (str.charAt(0) == '-') {
             if (str.length() == 1) {
